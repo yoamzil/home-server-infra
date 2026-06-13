@@ -25,7 +25,7 @@ All services are containerized and managed with Docker Compose for easy deployme
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/yoamzil/home-server-infra.
 cd home-server
 ```
 
