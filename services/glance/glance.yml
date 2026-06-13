@@ -1,0 +1,100 @@
+server:
+  port: 8080
+
+theme:
+  background-color: 240 8 9
+  primary-color: 43 50 70
+  positive-color: 100 60 50
+  negative-color: 0 70 70
+  contrast-multiplier: 1.1
+
+branding:
+  logo-text: "Home"
+  app-name: "Home Server"
+  hide-footer: false
+
+pages:
+
+  - name: Overview
+    columns:
+
+      - size: small
+        widgets:
+
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: Africa/Casablanca
+                label: Local
+
+          - type: calendar
+
+      - size: full
+        widgets:
+
+          - type: search
+            search-engine: duckduckgo
+            autofocus: false
+            new-tab: true
+            placeholder: "Search…"
+            bangs:
+              - title: Google
+                shortcut: "!g"
+                url: https://www.google.com/search?q={QUERY}
+
+          - type: server-stats
+
+          - type: monitor
+            title: Services
+            cache: 1m
+            sites:
+              - title: Jellyfin
+                url: http://${SERVER_IP}:8096
+                icon: sh:jellyfin
+              - title: qBittorrent
+                url: http://${SERVER_IP}:8081
+                icon: sh:qbittorrent
+
+      - size: small
+        widgets:
+
+          - type: bookmarks
+            title: Quick Access
+            groups:
+              - title: Server Admin
+                links:
+                  - title: Router
+                    url: http://192.168.110.1
+                    icon: mdi:router-network
+                  - title: Jellyfin
+                    url: http://${SERVER_IP}:8096
+                    icon: sh:jellyfin
+                  - title: qBittorrent
+                    url: http://${SERVER_IP}:8081
+                    icon: sh:qbittorrent
+
+  - name: Monitoring
+    columns:
+
+      - size: full
+        widgets:
+
+          - type: monitor
+            title: All Services
+            cache: 2m
+            sites:
+              - title: Jellyfin
+                url: http://${SERVER_IP}:8096
+                icon: sh:jellyfin
+              - title: qBittorrent
+                url: http://${SERVER_IP}:8081
+                icon: sh:qbittorrent
+
+      - size: small
+        widgets:
+
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: Africa/Casablanca
+                label: Server Time

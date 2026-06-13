@@ -1,0 +1,20 @@
+# environment
+.env
+
+# media data (correct path)
+data/media/
+
+# downloads
+data/media/downloads/
+
+# media files
+*.mkv
+*.mp4
+*.iso
+
+# service data
+services/jellyfin/config/data/
+services/jellyfin/config/data/
+services/jellyfin/config/log/
+services/jellyfin/config/metadata/
+services/qbittorrent/config/qBittorrent/

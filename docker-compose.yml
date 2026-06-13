@@ -1,0 +1,45 @@
+services:
+  glance:
+    image: glanceapp/glance:latest
+    container_name: glance
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_IP=${SERVER_IP}
+    volumes:
+      - /opt/home-server/services/glance/glance.yml:/app/config/glance.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc:/proc:ro
+      - /sys:/sys:ro
+
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+    volumes:
+      - /opt/home-server/services/jellyfin/config:/config
+      - /opt/home-server/data/media:/media
+
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - WEBUI_PORT=8081
+
+    ports:
+      - "8081:8081"
+      - "6881:6881"
+      - "6881:6881/udp"
+
+    volumes:
+      - /opt/home-server/services/qbittorrent/config:/config
+      - /opt/home-server/data/media/downloads:/downloads
+      - /opt/home-server/data/media:/media
