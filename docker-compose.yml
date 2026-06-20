@@ -7,6 +7,7 @@ services:
       - "8080:8080"
     environment:
       - SERVER_IP=${SERVER_IP}
+      - QBITTORRENT_IP=${QBITTORRENT_IP}
     volumes:
       - /opt/home-server/services/glance/glance.yml:/app/config/glance.yml:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -43,3 +44,4 @@ services:
       - /opt/home-server/services/qbittorrent/config:/config
       - /opt/home-server/data/media/downloads:/downloads
       - /opt/home-server/data/media:/media
+
