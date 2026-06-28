@@ -20,6 +20,10 @@ services:
     restart: unless-stopped
     ports:
       - "8096:8096"
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    group_add:
+      - "992"
     volumes:
       - /opt/home-server/services/jellyfin/config:/config
       - /opt/home-server/data/media:/media

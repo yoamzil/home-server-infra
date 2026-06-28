@@ -3,14 +3,14 @@
   <EncodingThreadCount>-1</EncodingThreadCount>
   <EnableFallbackFont>false</EnableFallbackFont>
   <EnableAudioVbr>false</EnableAudioVbr>
-  <DownMixAudioBoost>2</DownMixAudioBoost>
+  <DownMixAudioBoost>1</DownMixAudioBoost>
   <DownMixStereoAlgorithm>None</DownMixStereoAlgorithm>
   <MaxMuxingQueueSize>2048</MaxMuxingQueueSize>
-  <EnableThrottling>false</EnableThrottling>
+  <EnableThrottling>true</EnableThrottling>
   <ThrottleDelaySeconds>180</ThrottleDelaySeconds>
-  <EnableSegmentDeletion>false</EnableSegmentDeletion>
+  <EnableSegmentDeletion>true</EnableSegmentDeletion>
   <SegmentKeepSeconds>720</SegmentKeepSeconds>
-  <HardwareAccelerationType>none</HardwareAccelerationType>
+  <HardwareAccelerationType>vaapi</HardwareAccelerationType>
   <EncoderAppPathDisplay>/usr/lib/jellyfin-ffmpeg/ffmpeg</EncoderAppPathDisplay>
   <VaapiDevice>/dev/dri/renderD128</VaapiDevice>
   <QsvDevice />
@@ -27,11 +27,11 @@
   <VppTonemappingContrast>1</VppTonemappingContrast>
   <H264Crf>23</H264Crf>
   <H265Crf>28</H265Crf>
-  <EncoderPreset xsi:nil="true" />
+  <EncoderPreset>ultrafast</EncoderPreset>
   <DeinterlaceDoubleRate>false</DeinterlaceDoubleRate>
   <DeinterlaceMethod>yadif</DeinterlaceMethod>
-  <EnableDecodingColorDepth10Hevc>true</EnableDecodingColorDepth10Hevc>
-  <EnableDecodingColorDepth10Vp9>true</EnableDecodingColorDepth10Vp9>
+  <EnableDecodingColorDepth10Hevc>false</EnableDecodingColorDepth10Hevc>
+  <EnableDecodingColorDepth10Vp9>false</EnableDecodingColorDepth10Vp9>
   <EnableDecodingColorDepth10HevcRext>false</EnableDecodingColorDepth10HevcRext>
   <EnableDecodingColorDepth12HevcRext>false</EnableDecodingColorDepth12HevcRext>
   <EnableEnhancedNvdecDecoder>true</EnableEnhancedNvdecDecoder>
@@ -45,6 +45,8 @@
   <HardwareDecodingCodecs>
     <string>h264</string>
     <string>vc1</string>
+    <string>mpeg2video</string>
+    <string>hevc</string>
   </HardwareDecodingCodecs>
   <AllowOnDemandMetadataBasedKeyframeExtractionForExtensions>
     <string>mkv</string>
