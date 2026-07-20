@@ -28,12 +28,18 @@
     <string>Nfo</string>
   </LocalMetadataReaderOrder>
   <DisabledSubtitleFetchers />
-  <SubtitleFetcherOrder />
+  <SubtitleFetcherOrder>
+    <string>Open Subtitles</string>
+  </SubtitleFetcherOrder>
   <DisabledMediaSegmentProviders />
-  <MediaSegmentProviderOrder />
+  <MediaSegmentProviderOrder>
+    <string>Intro Skipper</string>
+  </MediaSegmentProviderOrder>
   <SkipSubtitlesIfEmbeddedSubtitlesPresent>false</SkipSubtitlesIfEmbeddedSubtitlesPresent>
   <SkipSubtitlesIfAudioTrackMatches>false</SkipSubtitlesIfAudioTrackMatches>
-  <SubtitleDownloadLanguages />
+  <SubtitleDownloadLanguages>
+    <string>ara</string>
+  </SubtitleDownloadLanguages>
   <RequirePerfectSubtitleMatch>true</RequirePerfectSubtitleMatch>
   <SaveSubtitlesWithMedia>true</SaveSubtitlesWithMedia>
   <DisabledLyricFetchers />
@@ -62,6 +68,7 @@
         <string>TheMovieDb</string>
       </ImageFetchers>
       <ImageFetcherOrder>
+        <string>Fanart</string>
         <string>TheMovieDb</string>
       </ImageFetcherOrder>
       <ImageOptions />
@@ -78,6 +85,7 @@
         <string>TheMovieDb</string>
       </ImageFetchers>
       <ImageFetcherOrder>
+        <string>Fanart</string>
         <string>TheMovieDb</string>
       </ImageFetcherOrder>
       <ImageOptions />

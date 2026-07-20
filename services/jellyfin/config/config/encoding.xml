@@ -7,9 +7,9 @@
   <DownMixStereoAlgorithm>None</DownMixStereoAlgorithm>
   <MaxMuxingQueueSize>2048</MaxMuxingQueueSize>
   <EnableThrottling>true</EnableThrottling>
-  <ThrottleDelaySeconds>180</ThrottleDelaySeconds>
+  <ThrottleDelaySeconds>120</ThrottleDelaySeconds>
   <EnableSegmentDeletion>true</EnableSegmentDeletion>
-  <SegmentKeepSeconds>720</SegmentKeepSeconds>
+  <SegmentKeepSeconds>30</SegmentKeepSeconds>
   <HardwareAccelerationType>vaapi</HardwareAccelerationType>
   <EncoderAppPathDisplay>/usr/lib/jellyfin-ffmpeg/ffmpeg</EncoderAppPathDisplay>
   <VaapiDevice>/dev/dri/renderD128</VaapiDevice>
